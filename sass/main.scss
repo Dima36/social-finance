@@ -3,26 +3,32 @@
 @import "compass";
 @import "compass/reset";
 /** Variables **/
-
 /** Add fonts **/
-@mixin font-face($style-name, $file, $folder) {
+
+@mixin font-face($style-name,
+$file,
+$folder) {
     $filepath: "../fonts/" + $folder + "/" + $file;
     @font-face {
         font-family: "#{$style-name}";
         src: url($filepath + ".eot");
-        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
-             url($filepath + ".woff") format('woff'),
-             url($filepath + ".ttf")  format('truetype'),
-             url($filepath + ".svg#" + $style-name + "") format('svg');
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf") format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
         font-weight: normal;
     }
-
 }
-@include font-face("Avenir Next", "avenir", "Avenir Next");
-@include font-face("Avenir Next Demi Bold", "avenir_bold", "Avenir Next Demi Bold");
-@include font-face("Avenir Next Medium", "avenir_medium", "Avenir Next Medium");
-@include font-face("Averir Next Ultra Light", "avenir_light", "Averir Next Ultra Light");
 
+@include font-face("Avenir Next",
+"avenir",
+"Avenir Next");
+@include font-face("Avenir Next Demi Bold",
+"avenir_bold",
+"Avenir Next Demi Bold");
+@include font-face("Avenir Next Medium",
+"avenir_medium",
+"Avenir Next Medium");
+@include font-face("Averir Next Ultra Light",
+"avenir_light",
+"Averir Next Ultra Light");
 $gray-bg: #f5f9f8;
 $green-bg: #7ea02f;
 $lighter-green-bg: #b1bd7b;
@@ -81,124 +87,6 @@ header {
     }
 }
 
-.map {
-    position: relative;
-    min-height: 641px;
-    .search-wrap {
-        position: absolute;
-        top: 21px;
-        right: 23px;
-        input {
-            width: 265px;
-            font-size: 27px;
-            border: none;
-            background: #e1dedd;
-            padding: 4px 12px;
-            z-index: 1;
-            outline: none;
-            color: #231f20;
-            font-family: "Averir Next Ultra Light", Arial, sans-serif;
-        }
-    }
-    .reset-btn {
-        background: #e1dedd;
-        position: absolute;
-        bottom: 15px;
-        right: 11px;
-        padding: 6px 66px;
-        color: #080808;
-        cursor: pointer;
-        font-size: 20px;
-        letter-spacing: 1.5px;
-        z-index: 1;
-        font-family: "Avenir Next Medium", Arial, sans-serif;
-    }
-    .filter {
-        position: absolute;
-        z-index: 1;
-        bottom: 14px;
-        left: 16px;
-        border: 2px solid #fff;
-        color: #fff;
-        text-align: center;
-        letter-spacing: 2px;
-        li {
-            background: $lighter-green-bg;
-            padding: 5px 0;
-            width: 180px;
-            border-top: 2px solid #fff;
-            cursor: pointer;
-            font-family: "Avenir Next Medium", Arial, sans-serif;
-            &:first-child {
-                border: none;
-            }
-            &.active {
-                background: $green-bg;
-            }
-        }
-    }
-    .popup {
-        background: $green-bg;
-        padding: 11px 56px 11px 15px;
-        position: absolute;
-        color: #fff;
-        text-transform: uppercase;
-        .title {
-            margin-bottom: 10px;
-            font-size: 26px;
-            letter-spacing: -1.4px;
-            font-family: "Avenir Next Medium", Arial, sans-serif;
-        }
-        &.projects-list {
-            top: 271px;
-            left: 259px;
-            &:after {
-                content: '';
-                position: absolute;
-                right: -13px;
-                top: 30%;
-                margin-top: -7px;
-                border-top: 12px solid transparent;
-                border-left: 14px solid #7ea02f;
-                border-bottom: 12px solid transparent;
-            }
-        }
-        ul {
-            font-size: 19px;
-            line-height: 25px;
-        }
-        h4 {
-            font-size: 24px;
-            margin-bottom: 13px;
-            font-family: "Avenir Next Medium", Arial, sans-serif;
-        }
-        .issue-area {
-            font-style: italic;
-            font-size: 20px;
-        }
-        .provider {
-            font-size: 20px;
-            margin-top: 5px;
-            font-family: "Averir Next Ultra Light", Arial, sans-serif;
-        }
-        &.project {
-            top: 154px;
-            left: 199px;
-            padding: 11px 15px 15px 15px;
-            &:after {
-                content: '';
-                position: absolute;
-                right: -13px;
-                top: 50%;
-                margin-top: -12px;
-                border-top: 12px solid transparent;
-                border-left: 14px solid #7ea02f;
-                border-bottom: 12px solid transparent;
-            }
-        }
-    }
-}
-
 .filters {
     background: $lighter-green-bg;
     color: #fff;
@@ -206,7 +94,7 @@ header {
     .title {
         float: left;
         background: $green-bg;
-        padding: 12px 16px 14px;
+        padding: 15px 16px 11px;
         position: relative;
         letter-spacing: -1.1px;
         font-size: 25px;
@@ -228,7 +116,7 @@ header {
         .filter {
             display: table;
             float: left;
-            margin-left: 35px;
+            margin-left: 61px;
             line-height: 21px;
             padding-top: 3px;
             position: relative;
@@ -314,7 +202,7 @@ header {
         a {
             color: $gray-text;
             text-decoration: none;
-            padding: 3px 10px 4px;
+            padding: 5px 10px 4px;
             border: 3px solid #9b9b9b;
             display: inline-block;
             margin: 28px 0 33px;
@@ -390,7 +278,8 @@ header {
             color: $blue-text;
             font-size: 85px;
             margin-bottom: 14px;
-            font-family: "Avenir Next Demi Bold", Arial, sans-serif;
+            font-weight: bold;
+            font-family: "Avenir Next", Arial, sans-serif;
             span {
                 font-size: 43px;
             }
@@ -431,7 +320,7 @@ header {
     float: right;
     margin-top: 7px;
     h3 {
-        padding: 9px 10px 10px 12px;
+        padding: 10px 10px 9px 12px;
         background: $green-bg;
         color: #fff;
         float: left;
@@ -439,7 +328,8 @@ header {
         font-size: 32px;
         margin-bottom: 39px;
         position: relative;
-        font-family: "Avenir Next Demi Bold", Arial, sans-serif;
+        font-weight: bold;
+        font-family: "Avenir Next", Arial, sans-serif;
         &:after {
             content: '';
             position: absolute;
@@ -472,7 +362,7 @@ header {
     a {
         color: $gray-text;
         text-decoration: none;
-        padding: 3px 10px 4px;
+        padding: 5px 10px 4px;
         border: 3px solid #9b9b9b;
         display: inline-block;
         margin-top: 14px;

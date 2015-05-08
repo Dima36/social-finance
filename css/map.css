@@ -1,0 +1,241 @@
+#ngo {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#mapmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+}
+
+.leaflet-control-attribution {
+    right: -112px;
+    bottom: 200px;
+    font-size: 10px!important;
+    color: #888!important;
+    background: none!important;
+    text-shadow: 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #fff;
+    transform: rotate(270deg);
+}
+
+#mapmap .dot {
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-top: -3px;
+    margin-left: -3px;
+    text-align: center;
+}
+
+#mapmap path.withData:hover {
+    opacity: 0.8;
+}
+
+#mapmap .popup.projects-list,
+.map .popup.project {
+    position: relative!important;
+    top: auto!important;
+    left: auto!important;
+    width: 300px;
+}
+
+.map .popup.project,
+.popup.projects-list ul {
+    cursor: pointer;
+}
+
+.popup.projects-list li:hover {
+    color: #ddd;
+}
+
+#mapmap .popup.projects-list:after {
+    top: 50%;
+}
+
+.leaflet-popup {
+    z-index: 100;
+}
+
+.leaflet-popup-tip-container {
+    display: none;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+}
+
+.leaflet-bar a {
+    border-radius: 0;
+}
+
+#ngo .right .statistics li p.text {
+    text-transform: uppercase;
+}
+
+#ngo .filters-wrap li:hover,
+#ngo .filters-wrap li.active {
+    background-color: #7ea02f;
+}
+
+#ngo .filters-wrap li.hidden {
+    display: none;
+}
+
+#ngo .chart-wrap {
+    text-transform: uppercase;
+}
+
+.filters .filters-wrap .filter .text.active:after {
+    border-top: 7px solid #7ea02f;
+}
+
+.filters .filters-wrap .filter .text.active {
+    color: #7ea02f;
+}
+
+.map {
+    position: relative;
+    min-height: 641px;
+}
+
+.map .search-wrap {
+    position: absolute;
+    top: 21px;
+    right: 23px;
+}
+
+.map .search-wrap input {
+    width: 265px;
+    font-size: 27px;
+    border: none;
+    background: #e1dedd;
+    padding: 6px 12px 4px;
+    z-index: 1;
+    outline: none;
+    color: #231f20;
+    font-family: "Averir Next Ultra Light", Arial, sans-serif;
+}
+
+.map .reset-btn {
+    background: #e1dedd;
+    position: absolute;
+    bottom: 15px;
+    right: 11px;
+    padding: 7px 66px 4px;
+    color: #080808;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    z-index: 1;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+}
+
+.map .filter {
+    position: absolute;
+    z-index: 1;
+    bottom: 14px;
+    left: 16px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.map .filter li {
+    background: #b1bd7b;
+    padding: 5px 0;
+    width: 180px;
+    border-top: 2px solid #fff;
+    cursor: pointer;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+}
+
+.map .filter li:first-child {
+    border: none;
+}
+
+.map .filter li.active {
+    background: #7ea02f;
+}
+
+.map .popup {
+    background: #7ea02f;
+    padding: 11px 56px 11px 15px;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.map .popup .title {
+    margin-bottom: 10px;
+    font-size: 26px;
+    letter-spacing: -1.4px;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+}
+
+.map .popup.projects-list {
+    top: 271px;
+    left: 259px;
+}
+
+.map .popup.projects-list:after {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 30%;
+    margin-top: -7px;
+    border-top: 12px solid transparent;
+    border-left: 14px solid #7ea02f;
+    border-bottom: 12px solid transparent;
+}
+
+.map .popup ul {
+    font-size: 19px;
+    line-height: 25px;
+}
+
+.map .popup h4 {
+    font-size: 24px;
+    margin-bottom: 13px;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+}
+
+.map .popup .issue-area {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.map .popup .provider {
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: "Averir Next Ultra Light", Arial, sans-serif;
+}
+
+.map .popup.project {
+    top: 154px;
+    left: 199px;
+    padding: 11px 15px 15px 15px;
+}
+
+.map .popup.project:after {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    margin-top: -12px;
+    border-top: 12px solid transparent;
+    border-left: 14px solid #7ea02f;
+    border-bottom: 12px solid transparent;
+}
